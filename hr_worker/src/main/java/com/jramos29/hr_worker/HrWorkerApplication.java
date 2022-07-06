@@ -1,4 +1,4 @@
-package com.jramos.hr_worker;
+package com.jramos29.hr_worker;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
