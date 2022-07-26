@@ -6,6 +6,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @EnableEurekaClient
 @SpringBootApplication
+// @EnableWebFluxSecurity
 public class HrApiGatewayApplication {
 
 	public static void main(String[] args) {
