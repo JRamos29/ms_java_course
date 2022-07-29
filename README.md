@@ -112,20 +112,20 @@ docker build -t hr-oauth:v1 .
 docker run -P --network hr-net hr-oauth:v1
 ```
 
-## hr-api-gateway-zuul
+## hr-api-gateway
 ```
 FROM openjdk:17
 VOLUME /tmp
 EXPOSE 8765
-ADD ./target/hr_api_gateway-zuul-0.0.1-SNAPSHOT.jar hr-api-gateway-zuul.jar
-ENTRYPOINT ["java","-jar","/hr-api-gateway-zuul.jar"]
+ADD ./target/hr_api_gateway-0.0.1-SNAPSHOT.jar hr-api-gateway.jar
+ENTRYPOINT ["java","-jar","/hr-api-gateway.jar"]
 ``` 
 ```
 ./mvnw clean package -DskipTests
 
-docker build -t hr-api-gateway-zuul:v1 .
+docker build -t hr-api-gateway:v1 .
 
-docker run -p 8765:8765 --name hr-api-gateway-zuul --network hr-net hr-api-gateway-zuul:v1
+docker run -p 8765:8765 --name hr-api-gateway --network hr-net hr-api-gateway:v1
 ```
 
 ## Alguns comandos Docker
