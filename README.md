@@ -29,7 +29,7 @@ ADD ./target/hr-config-server-0.0.1-SNAPSHOT.jar hr-config-server.jar
 ENTRYPOINT ["java","-jar","/hr-config-server.jar"]
 ``` 
 ```
-mvnw clean package
+./mvnw clean package
 
 docker build -t hr-config-server:v1 .
 
@@ -45,7 +45,7 @@ ADD ./target/hr-eureka-server-0.0.1-SNAPSHOT.jar hr-eureka-server.jar
 ENTRYPOINT ["java","-jar","/hr-eureka-server.jar"]
 ``` 
 ```
-mvnw clean package
+./mvnw clean package
 
 docker build -t hr-eureka-server:v1 .
 
@@ -60,7 +60,7 @@ ADD ./target/hr-worker-0.0.1-SNAPSHOT.jar hr-worker.jar
 ENTRYPOINT ["java","-jar","/hr-worker.jar"]
 ``` 
 ```
-mvnw clean package -DskipTests
+./mvnw clean package -DskipTests
 
 docker build -t hr-worker:v1 .
 
@@ -75,7 +75,7 @@ ADD ./target/hr-user-0.0.1-SNAPSHOT.jar hr-user.jar
 ENTRYPOINT ["java","-jar","/hr-user.jar"]
 ``` 
 ```
-mvnw clean package -DskipTests
+./mvnw clean package -DskipTests
 
 docker build -t hr-user:v1 .
 
@@ -90,7 +90,7 @@ ADD ./target/hr-payroll-0.0.1-SNAPSHOT.jar hr-payroll.jar
 ENTRYPOINT ["java","-jar","/hr-payroll.jar"]
 ``` 
 ```
-mvnw clean package -DskipTests
+./mvnw clean package -DskipTests
 
 docker build -t hr-payroll:v1 .
 
@@ -105,7 +105,7 @@ ADD ./target/hr-oauth-0.0.1-SNAPSHOT.jar hr-oauth.jar
 ENTRYPOINT ["java","-jar","/hr-oauth.jar"]
 ``` 
 ```
-mvnw clean package -DskipTests
+./mvnw clean package -DskipTests
 
 docker build -t hr-oauth:v1 .
 
@@ -121,7 +121,7 @@ ADD ./target/hr-api-gateway-zuul-0.0.1-SNAPSHOT.jar hr-api-gateway-zuul.jar
 ENTRYPOINT ["java","-jar","/hr-api-gateway-zuul.jar"]
 ``` 
 ```
-mvnw clean package -DskipTests
+./mvnw clean package -DskipTests
 
 docker build -t hr-api-gateway-zuul:v1 .
 
